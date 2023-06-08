@@ -16,3 +16,7 @@ Welcome to **Reading Notes**, a website designed to help you keep track of your 
 - **Accessibility**
 
 > "a way to document and highlight my new knowledge"
+
+I have finished the "Introduction to SQL" prep work, and i learned a lot about SQL Queries and Database management!
+Here is a screen shot to confirm finishing it:
+![](./DB.png)
