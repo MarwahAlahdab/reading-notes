@@ -48,3 +48,22 @@ Here is a screen shot to confirm finishing it:
 - A quick reference for the main points covered in this tutorial.
 
 
+## Class 1 - Readings: Exception Handling
+
+1. Name one major benefit of being able to trace the call stack?
+
+One major benefit of being able to trace the call stack during debugging is that it helps in understanding the sequence of program execution. 
+This will help to find errors.
+
+2. If you could use try/catch in your day to day life, name an exception you’d like to ‘catch’ and handle?
+
+If I could use try/catch in my day-to-day life, an exception I'd like to 'catch' and the handle is the "DelayException." This would be an exception that occurs when I'm late for something. By catching this exception, I could implement an alternative solution or plan to be on time.
+
+3.From an efficiency standpoint, are there downsides to try/catch blocks?
+When an exception is thrown, the program flow is interrupted, and the runtime environment searches for an appropriate catch block to handle the exception which may affect program speed or performance. 
+so we should only use it when its important.
+
+4. Describe how you explain the .Net approach to exception handling to a non technical friend?
+
+To explain the .NET approach to exception handling to a non-technical friend, I can give him an example of a situation when we need an alternative solution. 
+such as if you can't find a specific product on the market, try to find a similar one from another brand.
