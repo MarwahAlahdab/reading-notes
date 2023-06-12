@@ -47,6 +47,7 @@ Here is a screen shot to confirm finishing it:
 5. Cheat Sheet 
 - A quick reference for the main points covered in this tutorial.
 
+--------------------------------------------------
 
 ## Data Structures and Algorithms
 
@@ -58,8 +59,21 @@ When deciding which data structure to use, it's crucial to consider the efficien
 To avoid an infinite recursive call stack, we can implement proper base cases in our recursive function, ensuring that the recursion stops at a specific condition. 
 
 
+--------------------------------------------------
 
 
+
+
+## The Growth Mindset
+
+
+The growth mindset is emphasized in the article "Upgrade your technical skills with deliberate practice," highlighting the importance of deliberate practice, breaking down skills, and planning for learning and practice. Carol Dweck's TEDxNorrkoping talk on "The power of believing that you can improve" emphasizes the significance of adopting a growth mindset, believing in one's ability to learn and overcome challenges in programming and development.
+
+In terms of emotional intelligence, the self-assessment tool indicates that I have a good overall level of emotional intelligence. I demonstrate self-awareness, self-regulation, and social awareness, with a solid foundation in understanding my emotions, admitting mistakes, and showing empathy. Although there are areas to improve, such as managing biases and negative emotions at work, overall, my results indicate progress and the need to continue working on growth.
+
+Regarding the bias self-assessment, my score falls between 75 and 99, indicating some progress in addressing unconscious bias while recognizing the need for further growth. To continue improving, I should prioritize self-care, challenge myself with new perspectives, and actively seek out diverse opinions to expand my understanding and mitigate bias.
+
+--------------------------------------------------
 
 ## Class 1 - Readings: Exception Handling
 
@@ -80,3 +94,6 @@ so we should only use it when its important.
 
 To explain the .NET approach to exception handling to a non-technical friend, I can give him an example of a situation when we need an alternative solution. 
 such as if you can't find a specific product on the market, try to find a similar one from another brand.
+
+
+--------------------------------------------------
