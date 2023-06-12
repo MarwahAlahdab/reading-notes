@@ -48,6 +48,19 @@ Here is a screen shot to confirm finishing it:
 - A quick reference for the main points covered in this tutorial.
 
 
+## Data Structures and Algorithms
+
+1. What is 1 of the more important things you should consider when deciding which data structure is best suited to solve a particular problem?
+
+When deciding which data structure to use, it's crucial to consider the efficiency of operations required by the problem, such as insertion, deletion, or search, to ensure optimal performance, also for example if we need a fixed size or not as arrays have fixed size but linked list doesn't and so on.
+
+2. How can we ensure that we’ll avoid an infinite recursive call stack?
+To avoid an infinite recursive call stack, we can implement proper base cases in our recursive function, ensuring that the recursion stops at a specific condition. 
+
+
+
+
+
 ## Class 1 - Readings: Exception Handling
 
 1. Name one major benefit of being able to trace the call stack?
