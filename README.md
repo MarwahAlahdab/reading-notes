@@ -97,3 +97,46 @@ such as if you can't find a specific product on the market, try to find a simila
 
 
 --------------------------------------------------
+
+## Class 2 - Readings: Unit Testing and Documentation
+
+1. Three ways in which Unit Testing improves your codebase and productivity are:
+
+- Detecting Bugs Early
+
+- Facilitating Refactoring
+
+- Enhancing Productivity and making the testing faster by automating it.
+
+2. To write a unit test for a household task such as putting away laundry:
+-  Write the function that represents the task, such as "puttingAwayLaundry()".
+
+- Write test cases for different scenarios. we might have test cases for different types of clothes or colors.
+
+- Invoke the "putAwayLaundry()" method with the test inputs.
+
+- Evaluate the testing result is the same as the expected one.
+
+ 
+
+3. Three reasons a quality README is just as important as quality code are:
+
+- It will help other developers who want to understand the code if they want to use it, just like documentation. 
+
+- It will make collaboration easier between the team.
+- It will guide you on how to deal with the code so you can run it on your computer
+
+
+
+
+4. Four crucial elements to include when writing a README for co-developers are:
+
+1. An overview about the project
+
+2. How to install and set up the project
+
+3.how to use the project with an example use cases. 
+
+4. Any other guidelines
+
+--------------------------------------------------
