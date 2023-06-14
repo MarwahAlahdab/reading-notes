@@ -74,6 +74,28 @@ In terms of emotional intelligence, the self-assessment tool indicates that I ha
 Regarding the bias self-assessment, my score falls between 75 and 99, indicating some progress in addressing unconscious bias while recognizing the need for further growth. To continue improving, I should prioritize self-care, challenge myself with new perspectives, and actively seek out diverse opinions to expand my understanding and mitigate bias.
 
 --------------------------------------------------
+## Engineering Readings
+
+What’s the one thing I bring to this career (and a potential employer) that nobody else can?
+
+The one thing that sets me apart and makes me a valuable asset in this career and to potential employers is my work ethic and ambition.
+I work hard and put all my efforts to achieve my goals, and I always try to focus on solutions instead of problems.
+
+
+
+
+What are 3 things I’ll start doing to “un-stick” myself whenever I get stuck on a tough piece of code, logic, or feature?
+
+Whenever I get stuck on a tough piece of code, I try to do these steps:
+
+1. I give myself a short break if I feel tired and can't focus, its important to stay calm and not be stressed
+
+2. I like to trace the code line by line, sometimes I use a pen and paper if there's a need for it, and it's very helpful
+
+3. searching for potential solutions on the internet, I use different resources like StackOverflow
+
+--------------------------------------------------
+
 
 ## Class 1 - Readings: Exception Handling
 
