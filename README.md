@@ -162,3 +162,31 @@ such as if you can't find a specific product on the market, try to find a simila
 4. Any other guidelines
 
 --------------------------------------------------
+
+## Class 3 - Readings: File Manipulation / System.IO
+
+
+This topic is important because as developers it allows us to do many operations on files such as creating, reading, appending, and writing to the file.
+
+In C#, "File Manipulation/System.IO" refers to the collection of classes and methods made available by the System.IO namespace.
+It provides many operations for handling files.
+
+### I learned about many classes like: 
+
+File I/O:
+
+- File class
+- StreamReader and StreamWriter classes
+
+
+Stream I/O:
+
+- FileStream class
+
+- StreamReader and StreamWriter classes
+
+- BinaryReader and BinaryWriter
+
+## Things I want to know more about
+
+I want to know in what kind of projects I will need to work with files, so i want to see real examples.
