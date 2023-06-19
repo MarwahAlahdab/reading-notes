@@ -190,3 +190,38 @@ Stream I/O:
 ## Things I want to know more about
 
 I want to know in what kind of projects I will need to work with files, so i want to see real examples.
+
+--------------------------------------------------
+
+## Class 4 - Readings: Classes & Memory Management
+
+### Constructor
+
+1. What’s the difference between a static and an instance constructor?
+
+In c#,  "static constructor " is used to initialize static members of a class, It is declared using the static keyword and does not take any parameters.
+
+On the other hand, "instance constructor" is used to create an instance of a class. It is called when a new instance of the class is created using the "new" keyword and it takes parameters.
+
+
+2. How does the use of a static constructor differ from setting properties/values?
+
+A static constructor is used to initialize static members, while setting properties/values is a way to initialize instance members.
+
+Also, we can set properties/values many times on different instances, not only one time
+
+### Stack and Heap
+
+3. Knowing what you now know about the stack and the heap, how might you rethink the way you did projects in previous courses, to make more effecient use of memory?
+
+I think I would use the stalk to keep track of the methods execution, and I will be more careful when I use Value Types and Reference Types
+as using Reference Types in the wrong way might affect the performance.
+This is what I'm thinking based on my understanding of the article, but of course, I'm excited to understand this topic more deeply so I can make more effecient use of memory
+
+### Garbage Collector
+
+4. Compare “Garbage Collection” in C# with the lifecycle of normal household items.
+
+Every once in a while, we need to get rid of unused things in the house to keep it organized and clean. They were useful at a specific time, but now they are just taking up space!
+
+Same as Garbage Collector in c#, it identifies and removes objects that are no longer being used, to free the memory.
