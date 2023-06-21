@@ -225,3 +225,24 @@ This is what I'm thinking based on my understanding of the article, but of cours
 Every once in a while, we need to get rid of unused things in the house to keep it organized and clean. They were useful at a specific time, but now they are just taking up space!
 
 Same as Garbage Collector in c#, it identifies and removes objects that are no longer being used, to free the memory.
+
+
+
+
+--------------------------------------------------
+
+## Class 4 - Readings: Linked Lists
+
+##  Big O
+Big O notation is a way to measure the efficiency of algorithms and data structures.
+by big O we can analyze the performance based on the time complexity, space complexity, and the input size(n), for the best and the worst case scenarios
+
+In this way, we can decide which is the best data structure or algorithm to use for the software.
+
+## Linked lists
+Linked lists are a data structure that has two types (singly and doubly).
+linked lists have no fixed size and no index, and they don't require contiguous memory allocation, so it differs from arrays and it has their benefits of use.
+
+Linked lists consist of nodes and pointers, where pointers are references to the next node in the SLL, and in DLL there are pointers for the next and previous nodes
+
+we prefer to use Linked lists when we need flexibility for memory and we don't want a fixed size, but we don't prefer it when we need quick access for elements as it has linear complexity.
