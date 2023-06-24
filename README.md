@@ -231,7 +231,7 @@ Same as Garbage Collector in c#, it identifies and removes objects that are no l
 
 --------------------------------------------------
 
-## Class 4 - Readings: Linked Lists
+## Class 5 - Readings: Linked Lists
 
 ##  Big O
 Big O notation is a way to measure the efficiency of algorithms and data structures.
@@ -246,3 +246,50 @@ linked lists have no fixed size and no index, and they don't require contiguous 
 Linked lists consist of nodes and pointers, where pointers are references to the next node in the SLL, and in DLL there are pointers for the next and previous nodes
 
 we prefer to use Linked lists when we need flexibility for memory and we don't want a fixed size, but we don't prefer it when we need quick access for elements as it has linear complexity.
+
+--------------------------------------------------
+
+## Class 6 - Object Oriented Principles
+
+### Inheritance
+
+Inheritance enables you to create new classes that extend and modify the behavior defined in other classes.
+Where the parent class is called also a base class, and the class that inherits those members is called a derived class.
+
+To extend a class in C#, we use the : (colon) symbol.
+
+
+
+### Abstract 
+
+In c#, we can use the "abstract" keyword, which enables us to create classes and class members that are incomplete and must be implemented in a derived class.
+As the abstract methods have no implementation, the method definition is followed by a semicolon instead of a block.
+
+
+### Sealed
+
+Also, we have "sealed"  keyword, which is used to prevent a class from being inherited or overridden.
+As the sealed class can't be used as a base class, and it cannot be further derived from.
+we prevent inheritance by adding "sealed" class
+and we prevent overriding the method by adding the sealed keyword before the override keyword.
+
+
+### Polymorphism
+
+
+Polymorphism means "many-shaped", it allows override methods in derived classes that share a base class.
+So when we create objects it will have different behaviors based on their actual types. just like a circle and rectangle from a class shape, every shape will have different behavior.
+
+In C#, we can use the "virtual" keyword to declare a method or class member in a base class that can be overridden in derived classes.
+It provides a mechanism for polymorphism and allows derived classes to have their own implementation of the virtual member.
+
+
+
+### Hide base class members with new members (new)
+
+Also, there is the "new" keyword, In case we want the derived class to have a member with the same name as a member in a base class; we can use "new" to hide the base class member.
+It becomes before the return type of a class member that is being replaced.
+
+
+
+
