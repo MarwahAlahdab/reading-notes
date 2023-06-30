@@ -293,3 +293,42 @@ It becomes before the return type of a class member that is being replaced.
 
 
 
+--------------------------------------------------
+
+## Class 7 - Interfaces
+
+### Interfaces - define behavior for multiple types
+
+**An interface in C# contains definition of a set of related functionalities that must be implemented by a non-abstract class. It allows for defining static methods with implementations and provides the option to include default implementations for its members.**
+
+To create an interface, you use the "interface" keyword, and interface names begin with a capital "I".
+
+By default, interface members are public, but you can explicitly specify accessibility modifiers such as public, protected, and so on.
+
+**properties and methods in c# interfaces are public by default, and implicitly abstract**
+
+In order to implement an interface member, the corresponding member in the implementing class must be public, non-static, and have the same name and signature as the interface member.
+
+
+- An interface can define default implementations for some or all of its members. When a class implements the interface, it is not required to implement members that have default implementations.
+
+- C# doesn't support multiple inheritance of classes. A class can only inherit from a single class, but it can implement multiple interfaces.
+
+
+
+
+
+#### What is the problem that the interface solves?
+The basic problem an interface is trying to solve is to separate how we use something from how it is implemented.
+
+this means that if we have a Driver class it should be able to have a method Drive that can be used to drive any car, boat, or other kind of class that implements the IDriveable interface.
+
+
+
+
+### Default interface members
+Members with bodies allow the interface to provide a "default" implementation for classes that don't provide an overriding implementation
+
+
+### Interface instances
+An explicitly implemented member can't be accessed through a class instance, but only through an instance of the interface. In addition, default interface members can only be accessed through an instance of the interface.
