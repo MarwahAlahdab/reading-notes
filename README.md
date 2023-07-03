@@ -332,3 +332,43 @@ Members with bodies allow the interface to provide a "default" implementation fo
 
 ### Interface instances
 An explicitly implemented member can't be accessed through a class instance, but only through an instance of the interface. In addition, default interface members can only be accessed through an instance of the interface.
+
+
+--------------------------------------------------
+
+## Class 8 - Collections & Enums
+
+
+## Collections
+
+In c#, collections are used to group related objects. There are two main ways to group objects: using arrays or using collections.
+
+Collections offer more flexibility compared to arrays. They allow the group of objects to dynamically grow or shrink as needed. In some collections, you can assign a key to each object, making it easy to retrieve objects based on the key.
+
+If your collection only contains elements of a single data type, you can use the classes in the System.Collections.Generic namespace. These generic collections ensure type safety, preventing the addition of objects of other data types. When retrieving an element from a generic collection, you don't need to determine its data type or convert it.
+
+There are different kinds of collections available:
+
+- System.Collections.Generic classes: These enforce strong typing and only allow the desired data type to be added.
+- System.Collections.Concurrent classes: These are used in scenarios where multiple threads are accessing the collection concurrently.
+- System.Collections classes: These store elements as objects of type Object without specific typing.
+
+LINQ (Language-Integrated Query) can be used to perform queries on collections, making it easier to access and manipulate the data.
+
+If you want to define your own custom collection, you can do so by implementing either the IEnumerable <T<T>> or IEnumerable interface.
+
+
+
+
+## Enumeration Types
+
+An enumeration type, also known as an enum type, is a (value type) that consists of a set of named constants with underlying integral numeric values. 
+We can define an enumeration type by the "enum" keyword and specify the names of the enum members.
+
+Enumeration types are useful when you want to represent a choice from a set or a combination of choices. 
+
+In addition to representing mutually exclusive choices, enum types can also be used as bit flags. By using bitwise operations, you can combine multiple enum values into a single value to represent a combination of choices.
+
+Using enumeration types provides several benefits, including improved code readability, type safety, and ease of maintenance. Enum members serve as self-descriptive constants, making the code more expressive and easier to understand.
+
+enumeration types are helpful for defining sets of named constants with integral values, allowing for clearer and more structured representation of choices and combinations in your code.
