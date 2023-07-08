@@ -372,3 +372,48 @@ In addition to representing mutually exclusive choices, enum types can also be u
 Using enumeration types provides several benefits, including improved code readability, type safety, and ease of maintenance. Enum members serve as self-descriptive constants, making the code more expressive and easier to understand.
 
 enumeration types are helpful for defining sets of named constants with integral values, allowing for clearer and more structured representation of choices and combinations in your code.
+
+--------------------------------------------------
+
+## Class 9 - LINQ & Delegates
+
+## Language Integrated Query (LINQ) (C#)
+
+LINQ is a set of technologies that enables queries to be directly integrated into the C#.
+With LINQ, developers don't need to use different query languages for various data sources like SQL databases, XML documents, and web services.
+LINQ queries can be written in C# for SQL Server databases, XML documents, and any collection of objects that support IEnumerable or the generic IEnumerable<T<T>> interface. 
+
+With LINQ, developers can write queries as first-class language constructs, similar to classes and methods.
+We can use familiar operators and keywords to query strongly typed collections of objects. so we can perform filtering, ordering, and grouping operations on different data sources with minimal code. 
+
+
+Query expressions can be compiled to expression trees or to delegates, depending on the type that the query is applied to. IEnumerable <T<T>> queries are compiled to delegates. IQueryable and IQueryable<T<T>> queries are compiled to expression trees.
+
+
+
+
+## Introduction to LINQ Queries (C#)
+
+A query is an expression that retrieves data from a data source. 
+
+developers have had to learn a new query language for each type of data source for example, SQL for relational databases and XQuery for XML.
+
+But LINQ simplifies this situation, As in a LINQ query, you are always working with objects. You use the same basic coding patterns to query and transform data in any format LINQ provides.
+
+
+Three Parts of a Query Operation:
+
+1. Obtain the data source.
+2. Create the query.
+3. Execute the query (for example in a foreach statement).
+
+### Forcing Immediate Execution
+
+Queries that involve aggregation functions like Count, Max, Average, and First, don't require an explicit foreach statement because the query itself internally utilizes foreach to produce a result. It's important to note that these queries return a single value rather than an IEnumerable collection.     Basic LINQ Query Operations (C#)
+
+In a LINQ query, the "from" clause comes first in order to introduce the data source and the range variable, The range variable is like the iteration variable in a foreach loop.
+
+- Filtering (where)
+- Ordering (order by)
+- Grouping (group by)
+- Joining (join)
