@@ -409,7 +409,7 @@ Three Parts of a Query Operation:
 
 ### Forcing Immediate Execution
 
-Queries that involve aggregation functions like Count, Max, Average, and First, don't require an explicit foreach statement because the query itself internally utilizes foreach to produce a result. It's important to note that these queries return a single value rather than an IEnumerable collection.     Basic LINQ Query Operations (C#)
+Queries that involve aggregation functions like Count, Max, Average, and First, don't require an explicit foreach statement because the query itself internally utilizes foreach to produce a result. It's important to note that these queries return a single value rather than an IEnumerable collection. Basic LINQ Query Operations (C#)
 
 In a LINQ query, the "from" clause comes first in order to introduce the data source and the range variable, The range variable is like the iteration variable in a foreach loop.
 
@@ -417,3 +417,30 @@ In a LINQ query, the "from" clause comes first in order to introduce the data so
 - Ordering (order by)
 - Grouping (group by)
 - Joining (join)
+
+--------------------------------------------------
+
+## Class 10 - Stacks and Queues
+
+
+
+### Stack 
+**is a linear data structure that follows the Last-In-First-Out (LIFO) principle.** 
+
+It consists of Nodes, where each Node references the next Node in the stack, but does not reference its previous one.
+
+The stack supports two main operations:
+1. Push: add an element to the top of the stack
+2. Pop: removes the top element from the stack.
+
+and we also have a peek to get the top value, and IsEmpty to check if it's empty.
+The time complexity for all of them is O(1)
+
+### Queue
+ **It is another linear data structure that follows the First-In-First-Out (FIFO) principle.**
+
+ The queue supports many operations: 
+1. enqueue:  add an element to the rear (end) of the queue
+2. dequeue:  remove the element at the front of the queue.
+
+And same as the stack we have peek and IsEmpty
