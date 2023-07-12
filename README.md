@@ -444,3 +444,46 @@ The time complexity for all of them is O(1)
 2. dequeue:  remove the element at the front of the queue.
 
 And same as the stack we have peek and IsEmpty
+
+
+--------------------------------------------------
+
+## Class 11 - Introduction to Databases and ERDs
+
+1. **What is a Schema?**  
+A schema in a database defines how data is organized within a relational database, such as tables.
+Schemas provide a way to group related entities and manage access permissions.
+
+    **Why do we use them?**  
+It helps to build and manage databases, by organizing the database and managing access control.
+
+     **What do they look like?**  
+It looks like a diagram with many arrows that represent relations between entities
+
+
+2. **What are the different types of Database Keys?**  
+
+- **Primary Key**: a unique identifier for a row in a table. 
+- **Foreign Key**:  it comes by having a relationship between two tables by referencing the primary key of the other table.
+
+- **Composite Key**:  is used when a single column cannot uniquely identify a row. So it is a primary key that consists of multiple fields to create a unique identifier for a record.
+
+  **How are they different? When do you use one over the others?**  
+- primary key used when we have a unique identifier for each row in a table.
+- foreign key used when we have relationships between tables 
+
+- composite key used when a single column cannot uniquely identify a record
+
+
+
+3. **What are Relationships in a relational database?**  
+Relationships define the relations between tables in a relational database.
+
+   **What is a 1:1 relationship?**  
+It's when each record in one table is related to exactly one record in another table.
+
+    **What is a Many: Many relationship?**  
+when multiple records in one table are related to multiple records in another table. When we have many:many relationships we need a junction table to associate the related records between the two tables.
+
+   **What is a 1:Many or Many:1 relationship?**  
+when each record in one table can be related to multiple records in another table, but each record in the related table is related to only one record in the first table. 
