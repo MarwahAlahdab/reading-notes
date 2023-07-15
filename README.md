@@ -487,3 +487,40 @@ when multiple records in one table are related to multiple records in another ta
 
    **What is a 1:Many or Many:1 relationship?**  
 when each record in one table can be related to multiple records in another table, but each record in the related table is related to only one record in the first table. 
+
+
+--------------------------------------------------
+
+## Class 12 - Entity Framework and APIs
+
+### Entity Framework Core
+
+Entity Framework Core is an object-relational mapping (ORM) framework for .NET, that allows developers to work with databases using object-oriented concepts.
+
+It simplifies database operations by enabling developers to interact with the database using familiar things such as classes, objects, and LINQ (Language-Integrated Query). 
+Entity Framework Core supports various database providers and allows for the creation, retrieval, modification, and deletion of data without the need to write complex SQL queries manually.
+It also offers many features that make it an efficient tool for building data-driven applications in . NET.
+
+
+### Data Seeding
+
+data seeding is a process of inserting an initial set of data into the database.
+
+ It can be accomplished in several in EF Core:
+
+- Model seed data: where the data is associated with an entity type in the model configuration
+
+- Manual migration customization: where explicit calls to InsertData(), UpdateData(), and DeleteData() are added to the migration
+
+- Custom initialization logic: where DbContext.SaveChanges() is used before the main application logic to seed the data
+
+The choice of which way to use depends on the application requirements and constraints.
+
+
+### User secrets
+
+In .NET Core, User secrets provide a secure way to store sensitive user information separately, such as API keys and connection strings.
+
+By enabling user secrets, we can store this confidential data in a secrets.json file, which is not uploaded to source control.
+
+It can be easily managed through Visual Studio, and the stored secrets can be accessed in the application using the IConfiguration interface.
