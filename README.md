@@ -524,3 +524,53 @@ In .NET Core, User secrets provide a secure way to store sensitive user informat
 By enabling user secrets, we can store this confidential data in a secrets.json file, which is not uploaded to source control.
 
 It can be easily managed through Visual Studio, and the stored secrets can be accessed in the application using the IConfiguration interface.
+
+--------------------------------------------------
+
+## Class 13 - Dependency Injection & Repository Design Pattern
+
+
+1. **Dependency Injection:**
+Dependency Injection (DI) is a design pattern in .NET, used to achieve loose coupling between components. 
+It allows the dependencies of a class to be "injected" from the outside instead of creating them internally. 
+
+
+
+2. **Repository Design Pattern:**
+repository pattern has two purposes: 
+- it is an abstraction of the data layer 
+- it is a way of centralizing the handling of the domain objects.
+
+It abstracts the data storage details, allowing the rest of the application to interact with data objects using a simplified interface. 
+
+
+When combined with an ORM like Entity Framework, the pattern simplifies data access code, the Repository acts as an intermediary between domain objects and data mapping, providing a clear separation of dependencies and a organize working with data sources.
+
+3. **SOLID Principles:**
+SOLID is a set of five design principles for writing maintainable and scalable object-oriented software:
+
+   - **Single Responsibility Principle (SRP):** A class should have only one reason to change, meaning it should have a single responsibility or purpose.
+   - **Open/Closed Principle (OCP):** Software entities (classes, modules, etc.) should be open for extension but closed for modification, allowing new functionality to be added without altering existing code.
+   - **Liskov Substitution Principle (LSP):** Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+   - **Interface Segregation Principle (ISP):** Clients should not be forced to depend on interfaces they do not use, promoting the creation of specific interfaces for individual use cases.
+   - **Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules. 
+Both should depend on abstractions, this principle encourages the use of dependency injection to achieve loose coupling.
+
+
+
+5. **Why SOLID Matters:**
+
+1- **Single Responsibility Principle (SRP):**
+A class should have only one reason to change, meaning it should serve a singular purpose. Avoiding Swiss Army knife-like complexity in code brings clarity and maintainability by keeping methods focused and short.
+
+2- **Open Closed Principle (OCP):**
+Modules should be open for extension but closed for modification. Instead of constantly editing base code, use extensions like polymorphism to alter or add functionality, reducing the risk of introducing bugs.
+
+3- **Liskov Substitution Principle (LSP):**
+Subclasses should be substitutable for their base classes without impacting the client code's functionality. Just as ordering a salad at a restaurant doesn't change how you eat it, derived classes must seamlessly integrate with the client code.
+
+4- **Interface Segregation Principle (ISP):**
+Prefer having client-specific interfaces over a general-purpose one. Fine-grained interfaces prevent analysis paralysis and offer tailored options for consuming classes.
+
+5- **Dependency Inversion Principle (DIP):**
+Depend on abstractions, not concrete implementations. Code that directly instantiates concrete classes limits flexibility. Using interfaces enables easy switching between implementations, akin to driving different cars without altering your driving code.
