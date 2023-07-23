@@ -574,3 +574,33 @@ Prefer having client-specific interfaces over a general-purpose one. Fine-graine
 
 5- **Dependency Inversion Principle (DIP):**
 Depend on abstractions, not concrete implementations. Code that directly instantiates concrete classes limits flexibility. Using interfaces enables easy switching between implementations, akin to driving different cars without altering your driving code.
+
+
+--------------------------------------------------
+
+## Class 14 - Navigation Properties and Routing
+
+#### ASP.NET MVC Routing Overview (C#)
+
+
+The tutorial introduced how ASP.NET Routing works, and how incoming requests are mapped to specific controller actions based on the URL structure and the route table.
+
+It mentions the Global.asax file that contains event handlers for ASP.NET application lifecycle events.
+In the Global.asax, the route table is created during the Application_Start event.
+When an MVC application first starts, the Application_Start() method is called. This method, in turn, calls the RegisterRoutes() method. The RegisterRoutes() method creates the route table.
+
+
+#### Routing in ASP.NET Core
+
+**Routing is responsible for matching incoming HTTP requests and dispatching those requests to the app's executable endpoints.**
+It plays a role in determining how the application responds to different URLs and HTTP methods.
+
+The routing system can handle different types of HTTP requests like (GET, POST, PUT, DELETE) and map them to different endpoints.
+
+In ASP.NET Core, the routing system is responsible for interpreting the request URL and extracting relevant information like controller, action, and parameters, in order to invoke the appropriate code to handle the request. 
+
+The routing system works with a set of rules called routes, which defines is a pattern to match the incoming request URL and extracts relevant data from it.
+
+
+
+
