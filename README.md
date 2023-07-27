@@ -602,5 +602,64 @@ In ASP.NET Core, the routing system is responsible for interpreting the request 
 The routing system works with a set of rules called routes, which defines is a pattern to match the incoming request URL and extracts relevant data from it.
 
 
+--------------------------------------------------
+
+## Class 15 - Trees
+
+Trees
+
+#### Basic concepts:
+
+Node - A Tree node is an element that may contain its own value, and references to other nodes
+Root - The root is the node at the beginning of the tree
+K - A number that specifies the maximum number of children any node may have in a k-ary tree. In a binary tree, k = 2.
+Left - A reference to one child node, in a binary tree
+Right - A reference to the other child node, in a binary tree
+Edge - The edge in a tree is the link between a parent and child node
+Leaf - A leaf is a node that does not have any children
+Height - The height of a tree is the number of edges from the root to the furthest leaf
+
+
+
+## Traversals
+There are two categories of traversals when it comes to trees:
+
+1- Depth First
+Depth first traversal is where we prioritize going through the depth (height) of the tree first.
+It starts from the root node and explores as far as possible along each branch before backtracking to the previous node.
+DFS uses a stack data structure (or recursion) to keep track of nodes to be visited next.
+
+Here are three methods for depth first traversal:
+
+Pre-order: root >> left >> right
+
+In-order: left >> root >> right
+
+Post-order: left >> right >> root
+
+
+2- Breadth First
+It starts from the root node and visits all the nodes at the same level before proceeding to the next level.
+
+BFS uses a queue data structure to keep track of nodes to be visited next.
+
+
+## Binary Tree Vs K-ary Trees
+
+#### Binary trees:  allows each node to have only 2 childs
+#### K-ary Trees: In this type of tree we use K to refer to the maximum number of children that each Node is able to have.
+
+The Big O time complexity for inserting a new node is O(n)
+
+
+## Binary Search Tree
+ (BST) is a type of tree that does have some structure attached to it. In a BST, **nodes are organized in a manner where all values that are smaller than the root are placed to the left, and all values that are larger than the root are placed to the right.**
+
+Searching a BST can be done quickly, because all you do is compare the node you are searching for against the root of the tree or sub-tree. If the value is smaller, you only traverse the left side. If the value is larger, you only traverse the right side.
+
+### The best way to approach a BST search is with a **while loop** We cycle through the while loop until we hit a leaf, or until we reach a match with what we’re searching for.
+
+The Big O time complexity of insertion and search operations in a balanced Binary Search Tree (BST) is O(log n), where "n" is the number of nodes in the tree. However, in an unbalanced BST, the time complexity can degrade to O(n), making it behave like a linked list. To ensure efficient operations, maintaining balance using AVL trees or Red-Black trees is crucial.
+
 
 
