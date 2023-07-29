@@ -663,3 +663,29 @@ The Big O time complexity of insertion and search operations in a balanced Binar
 
 
 
+--------------------------------------------------
+
+## Class 16 - Data Transfer Objects
+
+
+### Data Transfer Objects (DTOs)
+
+####  A DTO is an object that defines how the data will be sent over the network.
+
+Currently, the API exposes database entities directly to clients, but that approach may not always be ideal. By using DTOs, the shape of data sent to clients can be customized, offering benefits such as removing circular references, hiding specific properties, reducing payload size, and decoupling the service layer from the database layer.
+
+By implementing DTOs, the API becomes more flexible in controlling the data sent to clients, allowing for better data abstraction and reducing unnecessary exposure to internal database structures. 
+
+
+
+## How to use Data Transfer Objects in ASP.NET Core
+
+A Data Transfer Object (DTO) is used as a container to encapsulate data and pass it from one layer of the application to another.
+
+**(Usually, DTOs are used in the service layer to return data back to the presentation layer.)**
+
+**The biggest advantage of using DTOs is decoupling clients from your internal data structures.**
+By doing so, changes to either layer can be made independently, promoting flexibility and maintainability. 
+
+DTOs also facilitate data hiding by allowing developers to return only the required data, enhancing security and privacy.
+To ensure immutability and avoid unwanted modifications, DTOs are typically designed to be immutable. 
