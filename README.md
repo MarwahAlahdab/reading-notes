@@ -689,3 +689,30 @@ By doing so, changes to either layer can be made independently, promoting flexib
 
 DTOs also facilitate data hiding by allowing developers to return only the required data, enhancing security and privacy.
 To ensure immutability and avoid unwanted modifications, DTOs are typically designed to be immutable. 
+
+--------------------------------------------------
+
+## Class 17 - Testing and Swagger and Deployment
+
+## Swagger
+
+Swagger (OpenAPI) is a specification for describing REST APIs. It allows both computers and humans to understand the capabilities of a REST API without direct access to the source code. 
+
+Its main goals are to Minimize the amount of work needed to connect decoupled services and document them accurately.
+
+
+#### Swagger UI: is a web-based interface that displays information about the service using the generated OpenAPI specification, allowing users to test and interact with API endpoints easily.
+
+
+## Unit Testing
+
+This tutorial focuses on writing unit tests for ASP.NET MVC controllers. It covers three key scenarios: 
+
+1. Testing the View: how to test whether the controller's action method returns the correct view. It uses `ViewResult.ViewName` to verify that the expected view is returned.
+
+2. Testing View Data: It explains how to test the data passed to the view using ViewData. The tutorial shows how to access the model passed to the view and validate its properties.
+
+3. Testing Action Results: How to test different types of action results returned by a controller based on input parameters.
+
+
+
