@@ -716,3 +716,41 @@ This tutorial focuses on writing unit tests for ASP.NET MVC controllers. It cove
 
 
 
+--------------------------------------------------
+
+## Class 18 - Identity
+
+### Intro to Identity
+
+
+**ASP.NET Core Identity is an API that provides user interface login functionality;** and manages various user-related tasks such as user registration, password management, roles, and token-based authentication. 
+
+It provides a way to create and handle user identities with claims, which represent specific facts about users.
+
+Users can either create an account with login information stored in Identity or use external login providers like Google, Microsoft Account, etc.
+
+Identity is commonly configured with a SQL Server database to store user data, but other persistent stores like Azure Table Storage can be used as well. 
+
+
+The tutorial includes steps for Creating an ASP.NET Core Web Application project with Individual User Accounts:
+
+1. Create new ASP.NET Core Web App project and name the project as desired.
+2. In the Authentication type input, select Individual User Accounts.
+3. Click OK to create the project with authentication enabled.
+4. Visual Studio will set up the project with authentication using Identity framework and related components.
+5. Build and run the project to see the basic authentication setup in action, which can be extended to fit our requirements .
+
+
+
+
+
+
+### Identity Demystified
+
+ASP.NET Core 2.0 Authentication and Authorization System Demystified
+
+The system uses verbs like Authenticate, Challenge, SignIn, SignOut, and Forbid to execute authentication and authorization tasks.
+
+Authentication handlers are responsible for implementing these behaviors, and they are registered with the authentication middleware. This middleware runs on every request, allowing the system to check user authentication and authorization and handle requests accordingly.
+
+By using these components together, you can effectively authenticate and authorize users to access resources on your website.
