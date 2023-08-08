@@ -754,3 +754,82 @@ The system uses verbs like Authenticate, Challenge, SignIn, SignOut, and Forbid 
 Authentication handlers are responsible for implementing these behaviors, and they are registered with the authentication middleware. This middleware runs on every request, allowing the system to check user authentication and authorization and handle requests accordingly.
 
 By using these components together, you can effectively authenticate and authorize users to access resources on your website.
+
+
+--------------------------------------------------
+
+## Class 19 - Roles, Claims and JWT Tokens
+
+
+### Claims-Based authorization
+
+When an identity is created it may be assigned one or more claims issued by a trusted party.
+**A claim is a name-value pair that represents what the subject is, not what the subject can do.**
+
+For example, the claim name would be DateOfBirth, and the claim value would be your date of birth.
+
+An identity can contain multiple claims with multiple values and can contain multiple claims of the same type.
+
+claims-based authorization in ASP.NET Core lets us control who can access a part of the application, based on specific attributes or characteristics (claims) associated with a user's identity. 
+
+Main Steps:
+
+1- we define an authorization policy:
+```
+builder.Services.AddAuthorization(options =>
+{
+   options.AddPolicy("EmployeeOnly", policy => policy.RequireClaim("EmployeeNumber"));
+});
+```
+2- use authorization:
+```
+app.UseAuthorization();
+```
+3- Apply the policy using the Policy property on the [Authorize] attribute to specify the policy name:
+```
+[Authorize(Policy = "EmployeeOnly")]
+```
+
+
+
+
+
+### Intro to Claims
+
+Authentication vs Authorisation:
+
+Authentication is about identifying who you are, while authorization is about determining what you're allowed to do.
+
+In ASP.NET Core, claims-based authorization is used to control access based on attributes associated with a user's identity.
+
+Claims-based authorization is more flexible than role-based authorization. For example, a user might have a passport identity and a driver's license identity, each with different claims.
+
+Identities in ASP.NET Core are ClaimsIdentity objects. Each identity contains claims (e.g., "FirstName," "DateOfBirth"), and multiple identities can belong to a single user, forming a ClaimsPrincipal.
+
+
+
+
+### JWT Authentication
+
+**JSON Web Token (JWT) is a way to represent claims to be transferred between two parties.**
+The authentication server generates a JWT token when a user successfully logs in or authenticates.
+The claims in a JWT are encoded as a JSON object.
+
+The token contains encoded claims (information) about the user, such as their identity, roles, and permissions.
+
+The token is digitally signed using a secret key known only to the authentication server.
+
+
+Using JWT for authenticating server APIs:
+
+1- Generate Token: After user authentication, the server generates a JWT token containing user info and signs it with a secret key.
+
+2- Send Token: The server sends the JWT token back to the client (requesting server), which stores it securely.
+
+3- Access API: When accessing a protected API, the client includes the JWT token in the request's Authorization header.
+
+4- Verify Token: The resource server (API) validates the token's signature, decodes it, and checks user claims.
+
+5- Grant Access: If the token is valid and user claims match, the API processes the request and provides data.
+
+6- Token Expiry: Tokens may have expiration; clients can request new tokens when needed.
