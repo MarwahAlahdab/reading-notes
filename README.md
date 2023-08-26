@@ -833,3 +833,52 @@ Using JWT for authenticating server APIs:
 5- Grant Access: If the token is valid and user claims match, the API processes the request and provides data.
 
 6- Token Expiry: Tokens may have expiration; clients can request new tokens when needed.
+
+
+--------------------------------------------------
+
+## Class 20 - Intro to MVC
+
+
+### Azure Dev Ops
+
+Azure DevOps is a set of development tools, that offers a range of features to help teams plan, develop, test, deliver, and monitor applications efficiently. 
+
+
+### Learn Basics Of MVC Architecture
+
+MVC is a design pattern that improves web application development efficiency compared to traditional ASP.NET Web Application approaches. In the traditional approach, user actions and views are tightly linked; while MVC separates the user interface (View) from the user actions (Controller).
+
+MVC eliminates the use of View State, which reduces the heaviness of web pages, enhances efficiency, and reduces response time.
+
+Also, Its loose coupling of UI and action logic makes testing more manageable.
+
+
+#### MVC components: Model, View, and Controller, each responsible for different aspects of the application.
+
+Models encapsulate application objects, Views define the UI using the Razor Engine, and Controllers handle user requests, returning responses by loading appropriate Views with data from Models. 
+
+The Controller's methods, called actions, are crucial, and routing maps incoming requests to the appropriate actions. 
+
+and we have the Data Access Layer (DAL) that is responsible for connecting with the database.
+
+The article recommends ASP.NET MVC for lightweight and large-scale applications, especially when developed by a team, while suggesting traditional ASP.NET Web Application Framework for RAD models and smaller-scale projects.Tag Helpers in ASP.NET Core
+
+
+### What are Tag Helpers
+Tag Helpers enable server-side code to participate in creating and rendering HTML elements in Razor files.
+
+There are many built-in Tag Helpers for common tasks - such as creating forms, links, loading assets, and more - and even more available in public GitHub repositories and as NuGet packages.
+
+Tag Helpers also enhance productivity by offering rich IntelliSense support, promoting reusability and effective code generation.
+They bring benefits like automatically managing cache busting for images through the ImageTagHelper, reducing manual effort and errors.
+
+Tag Helper scope is managed using directives like @addTagHelper and @removeTagHelper. The @addTagHelper directive makes Tag Helpers available to views, and the @removeTagHelper directive removes previously added Tag Helpers. By leveraging these directives, developers can control the availability of Tag Helpers in specific views or directories.
+
+
+
+#### Bootstrap
+
+A popular open-source front-end framework that provides a collection of pre-designed, responsive HTML, CSS, and JavaScript components.
+
+The tutorial was very beneficial .
