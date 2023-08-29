@@ -837,7 +837,7 @@ Using JWT for authenticating server APIs:
 
 --------------------------------------------------
 
-## Class 20 - Intro to MVC
+## Class 26 - Intro to MVC
 
 
 ### Azure Dev Ops
@@ -882,3 +882,170 @@ Tag Helper scope is managed using directives like @addTagHelper and @removeTagHe
 A popular open-source front-end framework that provides a collection of pre-designed, responsive HTML, CSS, and JavaScript components.
 
 The tutorial was very beneficial .
+
+--------------------------------------------------
+
+## Class 27 - MVC Forms
+
+### 4 Ways To Create Form In ASP.NET MVC :
+
+
+Forms - Weakly Typed (Synchronous)
+
+Forms - Strongly Typed (Synchronous)
+
+Forms - Strongly Typed AJAX (Asynchronous)
+
+Forms – HTML, AJAX and JQUERY
+
+Step 1: Create a New ASP.NET MVC Project MvcForms. 
+Step 2: Create a model class 
+
+
+### 1. Forms - Weakly Typed (Synchronous):
+
+```
+@using (Html.BeginForm("SubmitForm", "Home", FormMethod.Post))
+{
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Submit</button>
+}
+```
+Controller Action:
+
+```
+public ActionResult SubmitForm(string username, string password)
+{
+    // Process form data
+    return View();
+}
+```
+
+
+### 2. Forms - Strongly Typed (Synchronous):
+Model:
+```
+public class LoginForm
+{
+    public string Username { get; set; }
+    public string Password { get; set; }
+}
+```
+View:
+
+```
+@model LoginForm
+
+@using (Html.BeginForm("SubmitForm", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.Username, new { placeholder = "Username" })
+    @Html.PasswordFor(m => m.Password, new { placeholder = "Password" })
+    <button type="submit">Submit</button>
+}
+```
+
+Controller Action:
+```
+[HttpPost]
+public ActionResult SubmitForm(LoginForm model)
+{
+    // Process form data using the model
+    return View();
+}
+```
+
+### 3. Forms - Strongly Typed AJAX (Asynchronous):
+Example:
+
+View:
+
+```
+@model LoginForm
+
+@using (Html.BeginForm("SubmitForm", "Home", FormMethod.Post, new { @id = "loginForm" }))
+{
+    @Html.TextBoxFor(m => m.Username, new { placeholder = "Username" })
+    @Html.PasswordFor(m => m.Password, new { placeholder = "Password" })
+    <button type="submit">Submit</button>
+}
+
+<script>
+    $(function () {
+        $('#loginForm').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("SubmitForm", "Home")',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (data) {
+                    // Handle success response
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        });
+    });
+</script>
+
+```
+Controller Action:
+
+```
+[HttpPost]
+public ActionResult SubmitForm(LoginForm model)
+{
+    // Process form data using the model
+    return Json(new { success = true });
+}
+```
+
+
+
+
+### 4. Forms – HTML, AJAX, and jQuery:
+
+View:
+
+```
+<form id="loginForm">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button type="button" id="submitButton">Submit</button>
+</form>
+
+<script>
+    $(function () {
+        $('#submitButton').click(function () {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            $.ajax({
+                url: '@Url.Action("SubmitForm", "Home")',
+                type: 'POST',
+                data: { username: username, password: password },
+                success: function (data) {
+                    // Handle success response
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        });
+    });
+</script>
+```
+
+
+
+Controller Action:
+
+```
+[HttpPost]
+public ActionResult SubmitForm(string username, string password)
+{
+    // Process form data
+    return Json(new { success = true });
+}
+
+```
