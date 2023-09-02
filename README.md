@@ -1049,3 +1049,73 @@ public ActionResult SubmitForm(string username, string password)
 }
 
 ```
+
+
+
+--------------------------------------------------
+
+## Class 28 - Authorization, Cookies
+
+### HTTP Cookies
+
+
+**HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser.**
+The browser may store the cookie and send it back to the same server with later requests.
+
+HTTP cookie is usually used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the stateless HTTP protocol.
+
+
+
+#### Cookies are used for three purposes:
+
+1- Session management
+Logins, shopping carts, game scores, or anything else the server should remember
+
+2- Personalization
+User preferences, themes, and other settings
+
+3- Tracking
+Recording and analyzing user behavior
+
+## Setting and reading cookies
+
+with ASP.NET MVC, you can send a cookie to the client, in easy way:
+
+To set a cookie, you use the HttpContext.Response.Cookies.Append method, specifying a name and a value for the cookie.
+```
+HttpContext.Response.Cookies.Append("user_id", "1");
+```
+
+HttpContext class allow us to access the Cookies property, so we used the Response property.
+
+To read a cookie, you use the HttpContext.Request.Cookies property.
+```
+var userId = HttpContext.Request.Cookies["user_id"];
+```
+
+----
+
+The article provides an example where a cookie is used to determine whether a user has visited a page before. 
+
+If the cookie is not present, it is added with the current date and time.
+If the cookie is present, the first visit date is displayed to the user.
+
+---
+**"CookieOptions"** : A class that allows you to customize cookie settings such as expiration, domain, and path. 
+
+---
+
+### HTTP cookies explained
+
+Cookies are commonly used to manage user sessions and store user-specific information.
+
+Cookies are created by web servers using the `Set-Cookie` HTTP header. 
+This header includes information such as the cookie's name, value, expiration date, domain, path, and security settings.
+
+Cookies can be session-based (deleted when the browser is closed) or persistent (with an expiration date).
+
+
+
+
+
+
