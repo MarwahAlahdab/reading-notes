@@ -1116,6 +1116,99 @@ Cookies can be session-based (deleted when the browser is closed) or persistent 
 
 
 
+--------------------------------------------------
+
+## Class 29 - Azure Blob Storage
+
+
+
+
+### Introduction to Azure Blob Storage
+
+#### Azure Blob Storage is Microsoft's cloud-based object storage solution.
+Blob Storage is optimized for storing huge amounts of **unstructured data**, such as text or binary data.
+
+**Blob Storage is designed for:**
+
+1. Serving images or documents directly to a browser.
+2. Storing files for distributed access.
+3. Streaming video and audio.
+4. Writing log files.
+5. Data backup, restore, disaster recovery, and archiving.
+6. Data analysis by on-premises or Azure-hosted services.
+
+**Access Methods:**
+Users or client applications can access Blob Storage objects via HTTP/HTTPS, Azure Storage REST API, Azure PowerShell, Azure CLI, or Azure Storage client libraries. These libraries are available for multiple programming languages.
+
+
+
+**Blob Storage Resources:**
+Blob Storage offers three primary resources:
+
+1. **Storage Account:** Provides a unique namespace for data storage. It combines your account name with the Blob Storage endpoint.
+
+2. **Container:** Organizes blobs, similar to directories in a file system. Containers have unique names and can store multiple blobs.
+- Container names must be lowercase.
+
+
+3. **Blob:** Azure Storage supports three types of blobs: Block blobs, Append blobs, and Page blobs. They serve various purposes, including storing text, binary data, and virtual hard drive files.
+
+
+
+**Moving Data to Blob Storage:**
+Data can be migrated to Blob Storage using tools like AzCopy, Azure Storage Data Movement library, Azure Data Factory, Blobfuse, Azure Data Box service, and Azure Import/Export service.
+
+
+
+## Quickstart: Azure Blob Storage client library for .NET
+
+Requirements:
+
+1- Azure account
+
+2- Azure Storage Account
+
+3- .NET SDK: install .NET SDK for your operating system.
+
+
+**Setting Up:**
+
+- Create a .NET console application.
+
+- Install Azure Blob Storage Client Library:
+ Install the Azure.Storage.Blobs package via NuGet.
+
+- Set Up App Code: Replace the code in your Program.cs file with the provided code, including the necessary using statements.
+```
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using System;
+using System.IO;
+```
+
+- Authenticate to Azure:
+You can use either passwordless or connection string-based authentication.
+
+- Passwordless (Recommended):
+
+Use DefaultAzureCredential from Azure Identity to manage authentication.
+Assign roles to your Azure AD user account if you're developing locally.
+
+- Connection String:
+Authenticate using the account access key.
+Be cautious when using this approach as it exposes the access key.
+
+- Object Model:
+
+Azure Blob Storage has a hierarchy: Storage Account > Container > Blob.
+
+BlobServiceClient: Manipulates storage resources and blob containers.
+
+BlobContainerClient: Manipulates storage containers and their blobs.
+
+BlobClient: Manipulates storage blobs.
+
+
 
 
 
