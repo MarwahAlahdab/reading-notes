@@ -1212,3 +1212,93 @@ BlobClient: Manipulates storage blobs.
 
 
 
+--------------------------------------------------
+
+## Class 30 - Hash Tables
+
+
+### Intro to Hash Tables
+Terminology:
+
+Buckets - A bucket is what is contained in each index of the array of the hashtable. Each index is a bucket.
+An index could potentially contain multiple key/value pairs if a collision occurs.
+
+Collisions - A collision is what happens when more than one key gets hashed to the same location of the hashtable.
+
+#### Hashtables are a data structure that utilizes key-value pairs, so every Bucket has a key and a value.
+
+hashtables provide the ability to store the key into this data structure, and quickly retrieve the value, so we can do a lookup in an O(1) time complexity. This is done through what we call a hash.
+
+A hash is the result of some algorithm taking an input string and converting it into a value that could be used for either security or some other purpose. In the case of a hashtable, it is used to determine the index of the array.
+
+#### Hashtable uses a hash code to convert a key into an integer and then maps this integer to an index in an array. 
+
+This algorithm may involve operations like adding or multiplying ASCII values and using modulo to find the index.
+
+
+Insertion: 
+1. Accept a key.
+2. Calculate the hash code for the key.
+3. Use modulo to determine the array index.
+4. Store the key and value in the bucket at that index, potentially adding them to a linked list if needed.
+
+Retrieval:
+1. Accept a key.
+2. Calculate the hash code for the key.
+3. Use modulo to find the array index.
+4. Access the bucket at that index.
+5. Search through the bucket's linked list to find the key/value pair that matches the given key.
+
+### Methods
+set()
+
+When adding a new key/value pair to a hashtable:
+
+1. send the key to the hash() method.
+2. Once you determine the index of where it should be placed, go to that index
+3. Check if something exists at that index already, if it doesn’t, add it with the key/value pair.
+4. If something does exist, add the new key/value pair to the data structure within that bucket.
+
+
+get()
+
+
+The get() method takes in a key, gets the Hash, and goes to the index location specified. Once at the index location is found in the array, it is then the responsibility of the algorithm the iterate through the bucket and see if the key exists and return the value.
+
+has()
+
+
+The has() method will accept a key, and return a bool on if that key exists inside the hashtable. The best way to do this is to have the contains call the hash() method and check the hashtable if the key exists in the table given the index returned.
+
+keys()
+
+The keys() method returns a collection (array) of unique hash keys.
+
+hash()
+
+The hash() method will accept a key as a string, conduct the hash, and then return the index of the array where the key/value should be placed.
+
+
+## Basics of Hash Tables
+
+Hashing is a technique that is used to uniquely identify a specific object from a group of similar objects. 
+
+An example of using hashing in our lives is In universities, each student is assigned a unique roll number.
+
+Hashing is implemented in two steps:
+
+1- Hash Function: An element, often referred to as a key, is transformed into an integer using a hash function. This integer serves as an index for storing the original element in a hash table.
+
+2- Storage in Hash Table: The element is then stored in a hash table at the computed index, making it easy to retrieve using the hashed key.
+
+Here's how it works:
+```
+hash = hashfunc(key)
+index = hash % array_size
+```
+
+In this process, the hash value is calculated independently of the hash table's size, and it's then reduced to an index by using the modulo operator (%), ensuring the index falls within the valid range of 0 to array_size - 1.
+
+
+
+
