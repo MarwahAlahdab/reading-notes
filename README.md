@@ -1301,4 +1301,53 @@ In this process, the hash value is calculated independently of the hash table's 
 
 
 
+--------------------------------------------------
+
+## Class 31 - Razor Pages
+
+### Introduction to Razor Pages in ASP.NET Core
+
+Razor Pages simplify the development of web applications by combining the UI and the server-side code in a single Razor Page file.
+
+1. Razor Pages is enabled in Program.cs:
+
+   builder.Services.AddRazorPages();
+app.MapRazorPages();
+
+
+2. Basic Razor Page:
+A basic Razor Page is shown with a .cshtml file. It includes HTML content and server-side code.
+@page Directive: makes the file into an MVC action, which means that it handles requests directly, without going through a controller.
+
+3. PageModel: Razor Pages often include a corresponding PageModel class (C#) that defines the server-side behavior for the page. The PageModel class contains methods and properties that interact with the page's content and data.
+
+### Razor Pages vs. MVC
+
+Both of these frameworks  ASP.NET MVC (Model-View-Controller) and Razor Pages in ASP.NET Core are used to build server-side web applications.
+Both have advantages and we should depend on the requirements to choose which one to use:
+
+**ASP.NET MVC:**
+
+1. **Request Handling:** MVC routes requests to controller actions using the routing engine. The URL structure typically follows the pattern "/<controller name>/<action name>."
+
+2. **Controller Logic:** Application logic, including request validation, business logic, and service calls, resides in controller actions.
+
+3. **View Handling:** MVC actions often return views, and the framework looks for views in a default "Views" folder based on naming conventions.
+
+4. **Data Display:** Data to be displayed in views is typically passed through view models.
+
+5. **Folder Structure:** MVC applications have a standard folder structure with separate folders for controllers, views, and view models.
+
+**Razor Pages:**
+
+1. **Request Handling:** Razor Pages directly route requests to Razor Page files in the "Pages" folder based on request names (e.g., "/contact" routes to "Contact.cshtml").
+
+2. **Page Model:** Each Razor Page can have a corresponding Page Model class. Logic for HTTP verbs (e.g., GET, POST) resides in these Page Models.
+
+3. **View Handling:** Since requests are routed directly to Razor Pages, there's no need to locate separate views. The view is the Razor Page itself.
+
+4. **Data Display:** Data for display in Razor Pages is often set as properties in the Page Model class.
+
+5. **Folder Structure:** Razor Pages applications primarily use the "Pages" folder, and subfolders are respected in routing.
+
 
