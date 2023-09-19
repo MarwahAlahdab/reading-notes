@@ -1351,3 +1351,49 @@ Both have advantages and we should depend on the requirements to choose which on
 5. **Folder Structure:** Razor Pages applications primarily use the "Pages" folder, and subfolders are respected in routing.
 
 
+--------------------------------------------------
+
+## Class 32 - View Components
+
+
+### Intro to View Components
+
+**View Components in ASP.NET Core are a type of reusable component that encapsulates a piece of view logic.** They are similar to partial views but offer more flexibility and reusability. 
+
+Benefits of using View Components:
+
+- Code reuse: View Components allow you to reuse code that is common to multiple views. This can make your code more maintainable and easier to update.
+
+- Partial view rendering: View Components can be used to render partial views from within other views. This can be useful for breaking up your views into smaller, more manageable pieces.
+
+- Performance: View Components can improve the performance of your application by rendering only the part of the view that is needed. This is because View Components are typically smaller and less complex than controllers.
+
+- Maintainability: View Components can make your code more maintainable by encapsulating common functionality into reusable components. This makes it easier to understand and modify your code.
+
+Steps:
+
+1- create a class that inherits from ViewComponent
+```
+
+public class GreetingViewComponent : ViewComponent
+{
+    public IViewComponentResult Invoke(string name)
+    {
+        return View(name);
+    }
+}
+```
+
+2- To call this View Component from a view, you would use the following code:
+
+HTML
+```
+
+@await Component.InvokeAsync<GreetingViewComponent>("Bard")
+```
+
+3- This would render the following HTML:
+HTML
+```
+<p>Hello, Bard!</p>
+```
