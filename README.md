@@ -1397,3 +1397,82 @@ HTML
 ```
 <p>Hello, Bard!</p>
 ```
+--------------------------------------------------
+
+## Class 33 - Sendgrid
+
+ 
+### Sending Email with Microsoft Azure
+
+To get started with Twilio SendGrid and Azure:
+
+1) Create an Azure Subscription from Azure Portal 
+
+2)  you will see a list of your current Azure subscriptions, You can add a new Twilio SendGrid service.
+
+3) Create a Twilio SendGrid account:
+From the Azure portal home page, select Marketplace under Azure services. you can search for it by selecting More Services.
+ 
+   The Azure Marketplace provides many services, including the Twilio SendGrid email service. You can find it by searching for "Twilio SendGrid." You will also find it under Software as a Service (SaaS).
+
+
+
+4) Click the Twilio SendGrid resource -> Select Set up + subscribe.
+You will be taken to a page where you can assign your Twilio SendGrid account to an Azure Subscription and Resource Group -> when you finish, select Review + subscribe.
+
+5) click the Configure Account Now button to be taken to the Twilio SendGrid App. You will also receive an email when the subscription setup is complete.
+
+
+
+6) Twilio SendGrid account setup: 
+Before sending your first email, you will need to complete the following Twilio SendGrid account setup. (These requirements help secure your account and keep your messages from landing in spam folders).
+
+- Configure Two-factor authentication
+- Create an API key
+- Complete Sender Authentication
+
+7) Navigate to Two-Factor Authentication in the Twilio SendGrid Settings menu, and click Add Two-Factor Authentication. You will need to enter a phone number to complete the 2FA process
+
+8) API keys
+API Keys authenticate your application, mail client, or website with Twilio SendGrid services. Unlike a username and password, API keys are scoped to provide access only to the services you select. You can also delete and create API keys without impacting your other account credentials. For these reasons, Twilio SendGrid requires you to connect to its services using API keys.
+
+9) Create an API key
+In the Twilio SendGrid App, navigate to API Keys in the Settings menu, and select Create API Key.
+A modal will open where you can create your key. You must name the API key — we recommend something that will clearly differentiate the key from others you may create in the future.
+You must also select the type of key you want to create. Twilio SendGrid provides three types of API key:
+
+    Full Access
+
+    Restricted Access
+
+    Billing Access
+
+    You can limit a key's capabilities by creating a Restricted Access key and selecting a subset of all the possible permissions
+
+    Use an API key
+
+    Twilio SendGrid's v3 APIs expect an API key to be passed in an Authorization header as a Bearer Token.
+
+
+   When using Twilio SendGrid’s SMTP integration, you will set your API key as a password via Basic Authentication. Your username must always be the string, “apikey.” Using the account credentials (username and password) you set up through Azure will fail, so be sure to set your password to the 14 digit API key provided by the Twilio SendGrid App. Your account credentials are separate from the credentials used to authenticate with Twilio SendGrid’s APIs and SMTP services.
+```
+   username: "apikey"
+   password: <your-api-key>
+```
+
+
+10) Sender Authentication
+
+    Twilio SendGrid requires customers to complete Sender Authentication. This requirement protects your domain's reputation as an email sender and helps uphold legitimate sending behavior by Twilio SendGrid customers.
+
+    Setup includes domain authentication. Twilio SendGrid will provide DNS records that you must add to your domain.
+
+
+
+
+
+
+
+
+
+
