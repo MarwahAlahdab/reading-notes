@@ -1469,10 +1469,35 @@ You must also select the type of key you want to create. Twilio SendGrid provide
 
 
 
+--------------------------------------------------
 
+## Class 34 - Payment Processing
 
+### How Credit Card Processing Works:
 
+1- Authorization Procedure: When a customer initiates a credit card payment, the payment details are transmitted from the merchant's system to a payment gateway.
+The gateway then forwards this information to the bank responsible for issuing the credit card, and the request must be approved.
 
+2- Capture and Settlement:  transfer of funds from the customer's account to the merchant's account.
 
+3- Clearing: The payment details are relayed to the appropriate card network (e.g., Visa, MasterCard) for clearing purposes. This network plays a pivotal role in reconciling transactions between various banks involved.
+
+4- Funding: Subsequently, the acquiring bank, which represents the merchant, receives the funds from the issuing bank. This marks the culmination of the settlement process, with the merchant gaining access to the funds.
+
+5- Chargebacks: customers may dispute specific charges, leading to what is known as chargebacks. 
+
+### Concepts
+
+1. **Merchant Accounts**: The process begins with having a bank checking account, which is then linked to a Merchant Account. A Merchant Account connects to the credit card processing network and ensures that credit card transactions are processed correctly and securely. It can be visualized as the modern equivalent of a card-swipe machine.
+
+2. **Internet Merchant Account**: This is a specialized Merchant Account designed to accept online credit card transactions. It may work alongside a regular Merchant Account and is crucial for online payment processing.
+
+3. **Payment Gateway**: The Payment Gateway is responsible for securely transmitting credit card information to the Internet Merchant Account. It serves as a router and handles tasks like fraud checking and maintaining reliable links with merchants. Major Payment Gateways mentioned include Authorize.net, PayPal, and First Data.
+
+4. **Your Application**: Applications can interact with the Payment Gateway in different ways. Simple applications might redirect users to a web page on the Gateway for credit card processing, while more sophisticated applications can control the entry of credit card information through an API. Security requirements, especially for third-party applications, mandate that credit card information should not be stored on the application server.
+
+5. **Validation, Refunds, and Settlement**: When a user enters credit card information, it is sent securely to the Payment Gateway. If the card is cleared, the Gateway returns order numbers for future reference. This avoids storing credit card information. Refunds are typically made using these reference order numbers. Settlement, managed by the Merchant Account, involves transferring funds from the buyer to the merchant's bank, which takes several business days.
+
+6. **Fees**: There are various fees associated with online credit card processing. Merchant Accounts may have setup fees, recurring monthly fees, and per transaction fees. 
 
 
