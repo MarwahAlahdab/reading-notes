@@ -1501,3 +1501,30 @@ The gateway then forwards this information to the bank responsible for issuing t
 6. **Fees**: There are various fees associated with online credit card processing. Merchant Accounts may have setup fees, recurring monthly fees, and per transaction fees. 
 
 
+--------------------------------------------------
+
+## Class 35 - Graphs
+
+### Graphs
+Graph is a non-linear data structure, used to to represent and analyze relationships or connections between various objects.
+It consists of:
+- vertices (nodes) 
+-  edges:  connections or links between vertices in the graph
+
+## Types of graphs:
+
+Undirected Graph: In this type, edges have no direction, meaning they connect vertices without specifying a specific order.
+
+Directed Graph (Digraph): In a directed graph, each edge has a direction, indicating a one-way relationship from one vertex to another.
+
+Complete Graph: In a complete graph, every vertex is directly connected to every other vertex.
+
+Connected Graph: A connected graph is one where there is a path between every pair of vertices.
+
+Disconnected Graph: This type contains multiple components, and not every vertex is reachable from every other vertex.
+
+Acyclic Graph: An acyclic graph has no cycles, meaning there are no closed loops of vertices and edges.
+
+Cyclic Graph: A cyclic graph contains cycles, which are closed loops of vertices and edges.
+
+
