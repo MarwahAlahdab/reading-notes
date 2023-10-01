@@ -1528,3 +1528,33 @@ Acyclic Graph: An acyclic graph has no cycles, meaning there are no closed loops
 Cyclic Graph: A cyclic graph contains cycles, which are closed loops of vertices and edges.
 
 
+--------------------------------------------------
+
+## Class 37 - JAM Stack
+
+### What is the JAMstack?
+
+JAMstack is a software architecture and philosophy that adheres to the following components: Javascript, APIs, and Markup.
+
+
+
+What makes up the JAMstack?
+it's typically comprised of 3 components:
+J: Javascript
+A: APIs
+M: Markup
+
+#### Key advantages of JAMstack:
+
+- Pre-rendering: JAMstack sites generate HTML during the build process, allowing for fast and efficient content delivery to end-users. 
+
+- API-driven: JAMstack applications rely on APIs to access dynamic data and services. This approach allows for a clean separation of concerns, with the front end and back end being decoupled.
+
+- Version Control: JAMstack projects are typically managed using version control systems like Git. 
+
+- Scalability: With static files and cached content, JAMstack sites are highly scalable and can handle traffic spikes effectively. 
+
+- Security: Since JAMstack sites have a reduced attack surface (no server-side logic to exploit), they are inherently more secure. Access to APIs can be controlled with proper authentication and authorization.
+
+- Simplicity:  by breaking down complex applications into smaller parts. 
+
